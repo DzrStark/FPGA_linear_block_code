@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 28.185 ns
+From           : ss:inst4|ss[0]
+To             : ym_out[5]
+From Clock     : clk_20MHz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk_20MHz'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 112.65 MHz ( period = 8.877 ns )
+From           : bing_to_chuan4:inst8|74161:inst2|f74161:sub|9
+To             : hanming_code_mif:inst6|chuanbing:inst5|counter[31]
+From Clock     : clk_20MHz
+To Clock       : clk_20MHz
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk_20MHz'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : chuan_to_bing7:inst3|cb_out[0]
+To             : ss:inst4|ss[0]
+From Clock     : clk_20MHz
+To Clock       : clk_20MHz
+Failed Paths   : 50
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 50
+
+--------------------------------------------------------------------------------------
+

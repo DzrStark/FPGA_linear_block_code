@@ -1,0 +1,12 @@
+Fitter Status : Successful - Sun Mar 30 00:08:17 2025
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : hanming_code
+Top-level Entity Name : hanming_decode_mif
+Family : Cyclone
+Device : EP1C20F324C8
+Timing Models : Final
+Total logic elements : 327 / 20,060 ( 2 % )
+Total pins : 20 / 233 ( 9 % )
+Total virtual pins : 0
+Total memory bits : 128 / 294,912 ( < 1 % )
+Total PLLs : 0 / 2 ( 0 % )

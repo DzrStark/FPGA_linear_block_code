@@ -1,0 +1,547 @@
+Analysis & Synthesis report for hanming_code
+Sun Mar 30 00:08:14 2025
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Analysis & Synthesis RAM Summary
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for hanming_code_mif:inst6|lpm_rom0:inst10|altsyncram:altsyncram_component|altsyncram_kr31:auto_generated
+ 13. Parameter Settings for User Entity Instance: hanming_code_mif:inst6|lpm_rom0:inst10
+ 14. Parameter Settings for User Entity Instance: hanming_code_mif:inst6|lpm_rom0:inst10|altsyncram:altsyncram_component
+ 15. Parameter Settings for User Entity Instance: noise:inst1|74161:inst
+ 16. Parameter Settings for User Entity Instance: bing_to_chuan4:inst8|74161:inst2
+ 17. altsyncram Parameter Settings by Entity Instance
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sun Mar 30 00:08:14 2025    ;
+; Quartus II Version          ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name               ; hanming_code                             ;
+; Top-level Entity Name       ; hanming_decode_mif                       ;
+; Family                      ; Cyclone                                  ;
+; Total logic elements        ; 331                                      ;
+; Total pins                  ; 20                                       ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 128                                      ;
+; Total PLLs                  ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Device                                                         ; EP1C20F324C8       ;                    ;
+; Top-level entity name                                          ; hanming_decode_mif ; hanming_code       ;
+; Family name                                                    ; Cyclone            ; Stratix II         ;
+; Type of Retiming Performed During Resynthesis                  ; Full               ;                    ;
+; Resynthesis Optimization Effort                                ; Normal             ;                    ;
+; Physical Synthesis Level for Resynthesis                       ; Normal             ;                    ;
+; Use Generated Physical Constraints File                        ; On                 ;                    ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM Block Balancing                                       ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+
+; module/hanming_decode_mif.bdf    ; yes             ; User Block Diagram/Schematic File  ; G:/information_theory_test/my_project/module/hanming_decode_mif.bdf         ;
+; module/hanming_code_mif.bdf      ; yes             ; User Block Diagram/Schematic File  ; G:/information_theory_test/my_project/module/hanming_code_mif.bdf           ;
+; module/divide4.v                 ; yes             ; User Verilog HDL File              ; G:/information_theory_test/my_project/module/divide4.v                      ;
+; module/divide7.v                 ; yes             ; User Verilog HDL File              ; G:/information_theory_test/my_project/module/divide7.v                      ;
+; module/chuan_to_bing.v           ; yes             ; User Verilog HDL File              ; G:/information_theory_test/my_project/module/chuan_to_bing.v                ;
+; module/hanming_bianma.vhd        ; yes             ; User VHDL File                     ; G:/information_theory_test/my_project/module/hanming_bianma.vhd             ;
+; module/bing_to_chuan.bdf         ; yes             ; User Block Diagram/Schematic File  ; G:/information_theory_test/my_project/module/bing_to_chuan.bdf              ;
+; module/noise.bdf                 ; yes             ; User Block Diagram/Schematic File  ; G:/information_theory_test/my_project/module/noise.bdf                      ;
+; module/chuan_to_bing7.v          ; yes             ; User Verilog HDL File              ; G:/information_theory_test/my_project/module/chuan_to_bing7.v               ;
+; module/jiaozheng.vhd             ; yes             ; User VHDL File                     ; G:/information_theory_test/my_project/module/jiaozheng.vhd                  ;
+; module/yima.bdf                  ; yes             ; User Block Diagram/Schematic File  ; G:/information_theory_test/my_project/module/yima.bdf                       ;
+; module/bing_to_chuan4.bdf        ; yes             ; User Block Diagram/Schematic File  ; G:/information_theory_test/my_project/module/bing_to_chuan4.bdf             ;
+; module/counter.v                 ; yes             ; User Verilog HDL File              ; G:/information_theory_test/my_project/module/counter.v                      ;
+; 74194.bdf                        ; yes             ; Megafunction                       ; g:/quartus9.0/alteras/quartus/libraries/others/maxplus2/74194.bdf           ;
+; lpm_rom0.tdf                     ; yes             ; Auto-Found Wizard-Generated File   ; G:/information_theory_test/my_project/lpm_rom0.tdf                          ;
+; altsyncram.inc                   ; yes             ; Auto-Found AHDL File               ; g:/quartus9.0/alteras/quartus/libraries/megafunctions/altsyncram.inc        ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; g:/quartus9.0/alteras/quartus/libraries/megafunctions/altsyncram.tdf        ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                       ; g:/quartus9.0/alteras/quartus/libraries/megafunctions/stratix_ram_block.inc ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; g:/quartus9.0/alteras/quartus/libraries/megafunctions/lpm_mux.inc           ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; g:/quartus9.0/alteras/quartus/libraries/megafunctions/lpm_decode.inc        ;
+; aglobal90.inc                    ; yes             ; Megafunction                       ; g:/quartus9.0/alteras/quartus/libraries/megafunctions/aglobal90.inc         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                       ; g:/quartus9.0/alteras/quartus/libraries/megafunctions/a_rdenreg.inc         ;
+; altrom.inc                       ; yes             ; Megafunction                       ; g:/quartus9.0/alteras/quartus/libraries/megafunctions/altrom.inc            ;
+; altram.inc                       ; yes             ; Megafunction                       ; g:/quartus9.0/alteras/quartus/libraries/megafunctions/altram.inc            ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; g:/quartus9.0/alteras/quartus/libraries/megafunctions/altdpram.inc          ;
+; altqpram.inc                     ; yes             ; Megafunction                       ; g:/quartus9.0/alteras/quartus/libraries/megafunctions/altqpram.inc          ;
+; db/altsyncram_kr31.tdf           ; yes             ; Auto-Generated Megafunction        ; G:/information_theory_test/my_project/db/altsyncram_kr31.tdf                ;
+; 74161.tdf                        ; yes             ; Megafunction                       ; g:/quartus9.0/alteras/quartus/libraries/others/maxplus2/74161.tdf           ;
+; aglobal.inc                      ; yes             ; Megafunction                       ; g:/quartus9.0/alteras/quartus/libraries/megafunctions/aglobal.inc           ;
+; f74161.bdf                       ; yes             ; Megafunction                       ; g:/quartus9.0/alteras/quartus/libraries/others/maxplus2/f74161.bdf          ;
+; 74138.bdf                        ; yes             ; Megafunction                       ; g:/quartus9.0/alteras/quartus/libraries/others/maxplus2/74138.bdf           ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                 ;
++---------------------------------------------+-----------------------------------------------+
+; Resource                                    ; Usage                                         ;
++---------------------------------------------+-----------------------------------------------+
+; Total logic elements                        ; 331                                           ;
+;     -- Combinational with no register       ; 91                                            ;
+;     -- Register only                        ; 21                                            ;
+;     -- Combinational with a register        ; 219                                           ;
+;                                             ;                                               ;
+; Logic element usage by number of LUT inputs ;                                               ;
+;     -- 4 input functions                    ; 89                                            ;
+;     -- 3 input functions                    ; 22                                            ;
+;     -- 2 input functions                    ; 189                                           ;
+;     -- 1 input functions                    ; 9                                             ;
+;     -- 0 input functions                    ; 1                                             ;
+;                                             ;                                               ;
+; Logic elements by mode                      ;                                               ;
+;     -- normal mode                          ; 156                                           ;
+;     -- arithmetic mode                      ; 175                                           ;
+;     -- qfbk mode                            ; 0                                             ;
+;     -- register cascade mode                ; 0                                             ;
+;     -- synchronous clear/load mode          ; 112                                           ;
+;     -- asynchronous clear/load mode         ; 0                                             ;
+;                                             ;                                               ;
+; Total registers                             ; 240                                           ;
+; Total logic cells in carry chains           ; 185                                           ;
+; I/O pins                                    ; 20                                            ;
+; Total memory bits                           ; 128                                           ;
+; Maximum fan-out node                        ; hanming_code_mif:inst6|divider7:inst1|clk_out ;
+; Maximum fan-out                             ; 90                                            ;
+; Total fan-out                               ; 1233                                          ;
+; Average fan-out                             ; 3.50                                          ;
++---------------------------------------------+-----------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                           ;
++----------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                       ; Library Name ;
++----------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
+; |hanming_decode_mif                          ; 331 (2)     ; 240          ; 128         ; 20   ; 0            ; 91 (2)       ; 21 (0)            ; 219 (0)          ; 185 (0)         ; 0 (0)      ; |hanming_decode_mif                                                                                                       ; work         ;
+;    |bing_to_chuan4:inst8|                    ; 6 (0)       ; 6            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 6 (0)            ; 2 (0)           ; 0 (0)      ; |hanming_decode_mif|bing_to_chuan4:inst8                                                                                  ; work         ;
+;       |74161:inst2|                          ; 2 (0)       ; 2            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; 0 (0)      ; |hanming_decode_mif|bing_to_chuan4:inst8|74161:inst2                                                                      ; work         ;
+;          |f74161:sub|                        ; 2 (2)       ; 2            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 2 (2)           ; 0 (0)      ; |hanming_decode_mif|bing_to_chuan4:inst8|74161:inst2|f74161:sub                                                           ; work         ;
+;       |74194:inst|                           ; 4 (4)       ; 4            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |hanming_decode_mif|bing_to_chuan4:inst8|74194:inst                                                                       ; work         ;
+;    |chuan_to_bing7:inst3|                    ; 67 (67)     ; 46           ; 0           ; 0    ; 0            ; 21 (21)      ; 7 (7)             ; 39 (39)          ; 31 (31)         ; 0 (0)      ; |hanming_decode_mif|chuan_to_bing7:inst3                                                                                  ; work         ;
+;    |hanming_code_mif:inst6|                  ; 244 (0)     ; 182          ; 128         ; 0    ; 0            ; 62 (0)       ; 14 (0)            ; 168 (0)          ; 149 (0)         ; 0 (0)      ; |hanming_decode_mif|hanming_code_mif:inst6                                                                                ; work         ;
+;       |bing_to_chuan:inst9|                  ; 10 (2)      ; 8            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 8 (0)            ; 0 (0)           ; 0 (0)      ; |hanming_decode_mif|hanming_code_mif:inst6|bing_to_chuan:inst9                                                            ; work         ;
+;          |74194:inst1|                       ; 4 (4)       ; 4            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |hanming_decode_mif|hanming_code_mif:inst6|bing_to_chuan:inst9|74194:inst1                                                ; work         ;
+;          |74194:inst|                        ; 4 (4)       ; 4            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |hanming_decode_mif|hanming_code_mif:inst6|bing_to_chuan:inst9|74194:inst                                                 ; work         ;
+;       |chuanbing:inst5|                      ; 54 (54)     ; 38           ; 0           ; 0    ; 0            ; 16 (16)      ; 4 (4)             ; 34 (34)          ; 31 (31)         ; 0 (0)      ; |hanming_decode_mif|hanming_code_mif:inst6|chuanbing:inst5                                                                ; work         ;
+;       |counter:inst8|                        ; 12 (12)     ; 12           ; 0           ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 6 (6)            ; 6 (6)           ; 0 (0)      ; |hanming_decode_mif|hanming_code_mif:inst6|counter:inst8                                                                  ; work         ;
+;       |divider4:inst2|                       ; 44 (44)     ; 33           ; 0           ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 33 (33)          ; 32 (32)         ; 0 (0)      ; |hanming_decode_mif|hanming_code_mif:inst6|divider4:inst2                                                                 ; work         ;
+;       |divider4:inst3|                       ; 44 (44)     ; 33           ; 0           ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 33 (33)          ; 32 (32)         ; 0 (0)      ; |hanming_decode_mif|hanming_code_mif:inst6|divider4:inst3                                                                 ; work         ;
+;       |divider4:inst|                        ; 44 (44)     ; 33           ; 0           ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 33 (33)          ; 32 (32)         ; 0 (0)      ; |hanming_decode_mif|hanming_code_mif:inst6|divider4:inst                                                                  ; work         ;
+;       |divider7:inst1|                       ; 29 (29)     ; 18           ; 0           ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 18 (18)          ; 16 (16)         ; 0 (0)      ; |hanming_decode_mif|hanming_code_mif:inst6|divider7:inst1                                                                 ; work         ;
+;       |hmbbm:inst6|                          ; 7 (7)       ; 7            ; 0           ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |hanming_decode_mif|hanming_code_mif:inst6|hmbbm:inst6                                                                    ; work         ;
+;       |lpm_rom0:inst10|                      ; 0 (0)       ; 0            ; 128         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |hanming_decode_mif|hanming_code_mif:inst6|lpm_rom0:inst10                                                                ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)       ; 0            ; 128         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |hanming_decode_mif|hanming_code_mif:inst6|lpm_rom0:inst10|altsyncram:altsyncram_component                                ; work         ;
+;             |altsyncram_kr31:auto_generated| ; 0 (0)       ; 0            ; 128         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |hanming_decode_mif|hanming_code_mif:inst6|lpm_rom0:inst10|altsyncram:altsyncram_component|altsyncram_kr31:auto_generated ; work         ;
+;    |noise:inst1|                             ; 4 (1)       ; 3            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (0)            ; 3 (0)           ; 0 (0)      ; |hanming_decode_mif|noise:inst1                                                                                           ; work         ;
+;       |74161:inst|                           ; 3 (0)       ; 3            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (0)            ; 3 (0)           ; 0 (0)      ; |hanming_decode_mif|noise:inst1|74161:inst                                                                                ; work         ;
+;          |f74161:sub|                        ; 3 (3)       ; 3            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 3 (3)           ; 0 (0)      ; |hanming_decode_mif|noise:inst1|74161:inst|f74161:sub                                                                     ; work         ;
+;    |ss:inst4|                                ; 3 (3)       ; 3            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |hanming_decode_mif|ss:inst4                                                                                              ; work         ;
+;    |yima:inst5|                              ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |hanming_decode_mif|yima:inst5                                                                                            ; work         ;
++----------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                        ;
++------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------+
+; Name                                                                                                             ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                 ;
++------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------+
+; hanming_code_mif:inst6|lpm_rom0:inst10|altsyncram:altsyncram_component|altsyncram_kr31:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 128          ; 1            ; --           ; --           ; 128  ; ./module/memory.mif ;
++------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                            ;
++---------------------------------------------------+-----------------------------------------------------------+
+; Register name                                     ; Reason for Removal                                        ;
++---------------------------------------------------+-----------------------------------------------------------+
+; hanming_code_mif:inst6|counter:inst8|count[0]     ; Merged with bing_to_chuan4:inst8|74161:inst2|f74161:sub|9 ;
+; hanming_code_mif:inst6|chuanbing:inst5|counter[0] ; Merged with bing_to_chuan4:inst8|74161:inst2|f74161:sub|9 ;
+; hanming_code_mif:inst6|chuanbing:inst5|counter[1] ; Merged with hanming_code_mif:inst6|counter:inst8|count[1] ;
+; hanming_code_mif:inst6|counter:inst8|c_out[0]     ; Merged with bing_to_chuan4:inst8|74161:inst2|f74161:sub|9 ;
+; Total Number of Removed Registers = 4             ;                                                           ;
++---------------------------------------------------+-----------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 240   ;
+; Number of registers using Synchronous Clear  ; 96    ;
+; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 11    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------+
+; Inverted Register Statistics                            ;
++-----------------------------------------------+---------+
+; Inverted Register                             ; Fan out ;
++-----------------------------------------------+---------+
+; bing_to_chuan4:inst8|74161:inst2|f74161:sub|9 ; 13      ;
+; Total number of inverted registers = 1        ;         ;
++-----------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |hanming_decode_mif|hanming_code_mif:inst6|divider7:inst1|cnt_2[4] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |hanming_decode_mif|hanming_code_mif:inst6|divider7:inst1|cnt_1[7] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for hanming_code_mif:inst6|lpm_rom0:inst10|altsyncram:altsyncram_component|altsyncram_kr31:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                             ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                              ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: hanming_code_mif:inst6|lpm_rom0:inst10 ;
++-----------------+-------+-----------------------------------------------------------+
+; Parameter Name  ; Value ; Type                                                      ;
++-----------------+-------+-----------------------------------------------------------+
+; WIDTH_BYTEENA_A ; 1     ; Untyped                                                   ;
+; WIDTH_BYTEENA_B ; 1     ; Untyped                                                   ;
++-----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: hanming_code_mif:inst6|lpm_rom0:inst10|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                    ;
++------------------------------------+----------------------+---------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                 ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                 ;
+; WIDTH_A                            ; 1                    ; Untyped                                                 ;
+; WIDTHAD_A                          ; 7                    ; Untyped                                                 ;
+; NUMWORDS_A                         ; 128                  ; Untyped                                                 ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                 ;
+; WIDTH_B                            ; 1                    ; Untyped                                                 ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                 ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                 ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                 ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                 ;
+; INIT_FILE                          ; ./module/memory.mif  ; Untyped                                                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                 ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                 ;
+; DEVICE_FAMILY                      ; Cyclone              ; Untyped                                                 ;
+; CBXI_PARAMETER                     ; altsyncram_kr31      ; Untyped                                                 ;
++------------------------------------+----------------------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: noise:inst1|74161:inst ;
++------------------------+---------+----------------------------------+
+; Parameter Name         ; Value   ; Type                             ;
++------------------------+---------+----------------------------------+
+; DEVICE_FAMILY          ; Cyclone ; Untyped                          ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                   ;
++------------------------+---------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bing_to_chuan4:inst8|74161:inst2 ;
++------------------------+---------+--------------------------------------------+
+; Parameter Name         ; Value   ; Type                                       ;
++------------------------+---------+--------------------------------------------+
+; DEVICE_FAMILY          ; Cyclone ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                             ;
++------------------------+---------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                   ;
++-------------------------------------------+------------------------------------------------------------------------+
+; Name                                      ; Value                                                                  ;
++-------------------------------------------+------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                      ;
+; Entity Instance                           ; hanming_code_mif:inst6|lpm_rom0:inst10|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                    ;
+;     -- WIDTH_A                            ; 1                                                                      ;
+;     -- NUMWORDS_A                         ; 128                                                                    ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                                 ;
+;     -- WIDTH_B                            ; 1                                                                      ;
+;     -- NUMWORDS_B                         ; 1                                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                              ;
++-------------------------------------------+------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Sun Mar 30 00:08:13 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hanming_code -c hanming_code
+Info: Found 1 design units, including 1 entities, in source file module/hanming_decode_mif.bdf
+    Info: Found entity 1: hanming_decode_mif
+Info: Found 1 design units, including 1 entities, in source file module/hanming_code_mif.bdf
+    Info: Found entity 1: hanming_code_mif
+Info: Found 1 design units, including 1 entities, in source file module/divide4.v
+    Info: Found entity 1: divider4
+Info: Found 1 design units, including 1 entities, in source file module/hanming_code.bdf
+    Info: Found entity 1: hanming_code
+Info: Found 1 design units, including 1 entities, in source file module/divide7.v
+    Info: Found entity 1: divider7
+Info: Found 1 design units, including 1 entities, in source file module/chuan_to_bing.v
+    Info: Found entity 1: chuanbing
+Info: Found 1 design units, including 1 entities, in source file module/m_sequence.bdf
+    Info: Found entity 1: m_sequence
+Info: Found 2 design units, including 1 entities, in source file module/hanming_bianma.vhd
+    Info: Found design unit 1: hmbbm-myarch
+    Info: Found entity 1: hmbbm
+Info: Found 1 design units, including 1 entities, in source file module/m_fangzhen.bdf
+    Info: Found entity 1: m_fangzhen
+Info: Found 1 design units, including 1 entities, in source file module/bing_to_chuan.bdf
+    Info: Found entity 1: bing_to_chuan
+Info: Found 1 design units, including 1 entities, in source file module/noise.bdf
+    Info: Found entity 1: noise
+Info: Found 1 design units, including 1 entities, in source file module/hanming_decode.bdf
+    Info: Found entity 1: hanming_decode
+Info: Found 1 design units, including 1 entities, in source file module/chuan_to_bing7.v
+    Info: Found entity 1: chuan_to_bing7
+Info: Found 2 design units, including 1 entities, in source file module/jiaozheng.vhd
+    Info: Found design unit 1: ss-myarch
+    Info: Found entity 1: ss
+Info: Found 1 design units, including 1 entities, in source file module/yima.bdf
+    Info: Found entity 1: yima
+Info: Found 1 design units, including 1 entities, in source file module/bing_to_chuan4.bdf
+    Info: Found entity 1: bing_to_chuan4
+Info: Found 1 design units, including 1 entities, in source file module/counter.v
+    Info: Found entity 1: counter
+Info: Elaborating entity "hanming_decode_mif" for the top level hierarchy
+Info: Elaborating entity "hanming_code_mif" for hierarchy "hanming_code_mif:inst6"
+Warning: Block or symbol "divider4" of instance "inst3" overlaps another block or symbol
+Info: Elaborating entity "bing_to_chuan" for hierarchy "hanming_code_mif:inst6|bing_to_chuan:inst9"
+Info: Elaborating entity "74194" for hierarchy "hanming_code_mif:inst6|bing_to_chuan:inst9|74194:inst1"
+Info: Elaborated megafunction instantiation "hanming_code_mif:inst6|bing_to_chuan:inst9|74194:inst1"
+Info: Elaborating entity "divider4" for hierarchy "hanming_code_mif:inst6|divider4:inst2"
+Info: Elaborating entity "hmbbm" for hierarchy "hanming_code_mif:inst6|hmbbm:inst6"
+Info: Elaborating entity "divider7" for hierarchy "hanming_code_mif:inst6|divider7:inst1"
+Warning (10230): Verilog HDL assignment warning at divide7.v(16): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at divide7.v(22): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at divide7.v(32): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at divide7.v(38): truncated value with size 32 to match size of target (8)
+Info: Elaborating entity "chuanbing" for hierarchy "hanming_code_mif:inst6|chuanbing:inst5"
+Warning: Using design file lpm_rom0.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: lpm_rom0
+Info: Elaborating entity "lpm_rom0" for hierarchy "hanming_code_mif:inst6|lpm_rom0:inst10"
+Info: Elaborating entity "altsyncram" for hierarchy "hanming_code_mif:inst6|lpm_rom0:inst10|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "hanming_code_mif:inst6|lpm_rom0:inst10|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "hanming_code_mif:inst6|lpm_rom0:inst10|altsyncram:altsyncram_component" with the following parameter:
+    Info: Parameter "LPM_TYPE" = "altsyncram"
+    Info: Parameter "LPM_HINT" = "ENABLE_RUNTIME_MOD=NO"
+    Info: Parameter "INTENDED_DEVICE_FAMILY" = "Cyclone"
+    Info: Parameter "OPERATION_MODE" = "ROM"
+    Info: Parameter "WIDTH_A" = "1"
+    Info: Parameter "WIDTHAD_A" = "7"
+    Info: Parameter "NUMWORDS_A" = "128"
+    Info: Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info: Parameter "OUTDATA_REG_A" = "CLOCK0"
+    Info: Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info: Parameter "INIT_FILE" = "./module/memory.mif"
+    Info: Parameter "WIDTH_BYTEENA_A" = "1"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_kr31.tdf
+    Info: Found entity 1: altsyncram_kr31
+Info: Elaborating entity "altsyncram_kr31" for hierarchy "hanming_code_mif:inst6|lpm_rom0:inst10|altsyncram:altsyncram_component|altsyncram_kr31:auto_generated"
+Info: Elaborating entity "counter" for hierarchy "hanming_code_mif:inst6|counter:inst8"
+Warning (10230): Verilog HDL assignment warning at counter.v(13): truncated value with size 32 to match size of target (7)
+Info: Elaborating entity "noise" for hierarchy "noise:inst1"
+Info: Elaborating entity "74161" for hierarchy "noise:inst1|74161:inst"
+Info: Elaborated megafunction instantiation "noise:inst1|74161:inst"
+Info: Elaborating entity "f74161" for hierarchy "noise:inst1|74161:inst|f74161:sub"
+Info: Elaborated megafunction instantiation "noise:inst1|74161:inst|f74161:sub", which is child of megafunction instantiation "noise:inst1|74161:inst"
+Info: Elaborating entity "yima" for hierarchy "yima:inst5"
+Info: Elaborating entity "74138" for hierarchy "yima:inst5|74138:inst"
+Info: Elaborated megafunction instantiation "yima:inst5|74138:inst"
+Info: Elaborating entity "chuan_to_bing7" for hierarchy "chuan_to_bing7:inst3"
+Info: Elaborating entity "ss" for hierarchy "ss:inst4"
+Info: Elaborating entity "bing_to_chuan4" for hierarchy "bing_to_chuan4:inst8"
+Info: Elaborating entity "74161" for hierarchy "bing_to_chuan4:inst8|74161:inst2"
+Info: Elaborated megafunction instantiation "bing_to_chuan4:inst8|74161:inst2"
+Info: Converted 2 single input CARRY primitives to CARRY_SUM primitives
+Info: Generated suppressed messages file G:/information_theory_test/my_project/hanming_code.map.smsg
+Info: Implemented 352 device resources after synthesis - the final resource count might be different
+    Info: Implemented 1 input pins
+    Info: Implemented 19 output pins
+    Info: Implemented 331 logic cells
+    Info: Implemented 1 RAM segments
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 259 megabytes
+    Info: Processing ended: Sun Mar 30 00:08:14 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in G:/information_theory_test/my_project/hanming_code.map.smsg.
+
+

@@ -1,0 +1,21 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x00cb821c: edt_ged + 0x9821c (_DllMain@12 + 0x6b45c)
+	0x01222559: ccl_thr + 0x2559 (thr_mutex_unlock + 0x59)
+	0x00ca4543: edt_ged + 0x84543 (_DllMain@12 + 0x57783)
+	0x00c9da8e: edt_ged + 0x7da8e (_DllMain@12 + 0x50cce)
+	0x00cb638c: edt_ged + 0x9638c (_DllMain@12 + 0x695cc)
+	0x5df6beb2: mfc90 + 0x5beb2
+	</callstack>
+	<error>Current editor: GED, GED, GED</error>
+	<date>Sat Mar 29 20:51:45 2025</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X00CB821C
+Current editor: GED, GED, GED
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+

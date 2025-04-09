@@ -1,0 +1,22 @@
+Info: Start Nativelink Simulation process
+Info: NativeLink has detected a mixed Verilog and VHDL design -- verilog simulation models will be used
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  RTL
+Family                :  cyclone
+Quartus root          :  g:/quartus9.0/alteras/quartus/bin/
+Quartus sim root      :  g:/quartus9.0/alteras/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  hanming_code.vo
+Sim SDF file          :  hanming_code__verilog.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script g:/quartus9.0/alteras/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File hanming_code_run_msim_rtl_verilog.do already exists - backing up current file as hanming_code_run_msim_rtl_verilog.do.bak7
+Info: Spawning ModelSim-Altera Simulation software 

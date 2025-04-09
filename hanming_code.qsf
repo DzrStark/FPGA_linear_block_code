@@ -1,0 +1,97 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 132 02/25/2009 SJ Full Version
+# Date created = 16:12:09  March 25, 2025
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		hanming_code_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name DEVICE EP1C20F324C8
+set_global_assignment -name TOP_LEVEL_ENTITY hanming_decode_mif
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:12:09  MARCH 25, 2025"
+set_global_assignment -name LAST_QUARTUS_VERSION 9.0
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_RUN_TOOL_AUTOMATICALLY OFF -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH hanming_decode_mif_vlg_tst -section_id eda_simulation
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name BDF_FILE module/hanming_decode_mif.bdf
+set_global_assignment -name BDF_FILE module/hanming_code_mif.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE module/divide7.vwf
+set_global_assignment -name VERILOG_FILE module/divide4.v
+set_global_assignment -name BDF_FILE module/hanming_code.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE module/divide4.vwf
+set_global_assignment -name VERILOG_FILE module/divide7.v
+set_global_assignment -name VERILOG_FILE module/chuan_to_bing.v
+set_global_assignment -name BDF_FILE module/m_sequence.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE module/m_sequence.vwf
+set_global_assignment -name VHDL_FILE module/hanming_bianma.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE bianma.vwf
+set_global_assignment -name BDF_FILE module/m_fangzhen.bdf
+set_global_assignment -name BDF_FILE module/bing_to_chuan.bdf
+set_global_assignment -name BDF_FILE module/noise.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE module/noise.vwf
+set_global_assignment -name BDF_FILE module/hanming_decode.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE module/hm_noise.vwf
+set_global_assignment -name VERILOG_FILE module/chuan_to_bing7.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE module/chuan_to_bing7.vwf
+set_global_assignment -name VHDL_FILE module/jiaozheng.vhd
+set_global_assignment -name BDF_FILE module/yima.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE module/yima.vwf
+set_global_assignment -name BDF_FILE module/bing_to_chuan4.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE yima.vwf
+set_global_assignment -name VERILOG_FILE module/counter.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE mif_code.vwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE mif_decode.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE mif_decode.vwf
+set_global_assignment -name EDA_TEST_BENCH_NAME hanming_decode_mif_vlg_tst -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME hanming_decode_mif_vlg_tst -section_id hanming_decode_mif_vlg_tst
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME hanming_decode_mif_vlg_tst -section_id hanming_decode_mif_vlg_tst
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/hanming_decode_mif.vt -section_id hanming_decode_mif_vlg_tst
+set_global_assignment -name EDA_TEST_BENCH_NAME hanming_decode_mif -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME hanming_decode_mif -section_id hanming_decode_mif
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME hanming_decode_mif -section_id hanming_decode_mif
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/hanming_decode_mif.v -section_id hanming_decode_mif
+set_global_assignment -name MISC_FILE "G:/information_theory_test/my_project/hanming_code.dpf"
