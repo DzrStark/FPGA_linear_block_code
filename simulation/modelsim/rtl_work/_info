@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dG:\information_theory_test\my_project\simulation\modelsim
+vchuan_to_bing7
+I@BGf80T;6`OWHRgooa7P63
+V8RLN<bZ]=LY:zR82R:T<?1
+Z1 dG:\information_theory_test\my_project\simulation\modelsim
+w1743245431
+8G:/information_theory_test/my_project/module/chuan_to_bing7.v
+FG:/information_theory_test/my_project/module/chuan_to_bing7.v
+L0 1
+Z2 OV;L;6.6d;45
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+G:/information_theory_test/my_project/module -O0
+!s100 3zM78B0C1>m55VS3e3R2E0
+!s85 0
+!s101 -O0
+vchuanbing
+IPkHU_JFWgcAO:]7SW?_3M1
+VU2e3mJ<nSPl>Ncn_QMPia1
+R1
+w1742893710
+8G:/information_theory_test/my_project/module/chuan_to_bing.v
+FG:/information_theory_test/my_project/module/chuan_to_bing.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!s100 Bk;OjX]0Xb1K=fVBW]a[U0
+!s85 0
+!s101 -O0
+vcounter
+I[ZKELn?KhYa9eb<dbL0?X3
+VcD`7MfWo>ffaQ;fOB?9X>3
+R1
+w1743251275
+8G:/information_theory_test/my_project/module/counter.v
+FG:/information_theory_test/my_project/module/counter.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!s100 HO79c;nc2dh<?i:UDc;em3
+!s85 0
+!s101 -O0
+vdivider4
+I`TQg;9e5B0eF5jeTAPI3h3
+Vb2DVD?:6V4P5Y5_]F[`^k2
+R1
+w1742892631
+8G:/information_theory_test/my_project/module/divide4.v
+FG:/information_theory_test/my_project/module/divide4.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!s100 HZNG<An<G3BZ6_m@^oNaC0
+!s85 0
+!s101 -O0
+vdivider7
+IQ_3dmR11V3adm6zXM55o63
+V;j7LHnb]a504I5e2V[55:0
+R1
+w1742893016
+8G:/information_theory_test/my_project/module/divide7.v
+FG:/information_theory_test/my_project/module/divide7.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!s100 hjm3^ZTXo3k==a=Ez_ImV2
+!s85 0
+!s101 -O0
+vhanming_decode_mif_vlg_tst
+!s100 @WF4g_e3T@GA4=z<_zCD61
+IoHa0QMYB;]akJnC5nF@cz0
+V3e2Q]gjPA`:?H9Z<C0;m63
+R1
+w1743264199
+8G:/information_theory_test/my_project/simulation/modelsim/hanming_decode_mif.vt
+FG:/information_theory_test/my_project/simulation/modelsim/hanming_decode_mif.vt
+L0 9
+R2
+r1
+!s85 0
+31
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+G:/information_theory_test/my_project/simulation/modelsim -O0
+Ehmbbm
+Z5 w1743227627
+Z6 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z7 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z8 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+R1
+Z9 8G:/information_theory_test/my_project/module/hanming_bianma.vhd
+Z10 FG:/information_theory_test/my_project/module/hanming_bianma.vhd
+l0
+L5
+VKE6P2naXQ<N>Q:R=J<k[L3
+Z11 OV;C;6.6d;45
+31
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 nTakX?gzYFI=_mK=k[>^I3
+Amyarch
+R6
+R7
+R8
+DEx4 work 5 hmbbm 0 22 KE6P2naXQ<N>Q:R=J<k[L3
+l14
+L13
+VL47zgF`oiR7PBe2TEk4o<0
+R11
+31
+Z14 Mx3 4 ieee 14 std_logic_1164
+Z15 Mx2 4 ieee 18 std_logic_unsigned
+Z16 Mx1 4 ieee 15 std_logic_arith
+R12
+R13
+!s100 J:5B<YY_0H0=`LeLF?BDI3
+Ess
+Z17 w1743245908
+R6
+R7
+R8
+R1
+Z18 8G:/information_theory_test/my_project/module/jiaozheng.vhd
+Z19 FG:/information_theory_test/my_project/module/jiaozheng.vhd
+l0
+L5
+V;RF7P3@A?dhLh7mj[7U^N3
+R11
+31
+R12
+R13
+!s100 W57OB1eG9E[b150hk@L>`3
+Amyarch
+R6
+R7
+R8
+DEx4 work 2 ss 0 22 ;RF7P3@A?dhLh7mj[7U^N3
+l14
+L13
+VjA;NLcQ[EIKj50acbNGKX1
+R11
+31
+R14
+R15
+R16
+R12
+R13
+!s100 o54QCmbGRBW=9UfcGMLH71

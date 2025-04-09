@@ -1,0 +1,87 @@
+# Reading G:/quartus11.0/soft/modelsim_ase/tcl/vsim/pref.tcl 
+# do hanming_code_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying G:\quartus11.0\soft\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied G:\quartus11.0\soft\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+G:/information_theory_test/my_project/module {G:/information_theory_test/my_project/module/divide4.v}
+# Model Technology ModelSim ALTERA vlog 6.6d Compiler 2010.11 Nov  2 2010
+# -- Compiling module divider4
+# 
+# Top level modules:
+# 	divider4
+# vlog -vlog01compat -work work +incdir+G:/information_theory_test/my_project/module {G:/information_theory_test/my_project/module/divide7.v}
+# Model Technology ModelSim ALTERA vlog 6.6d Compiler 2010.11 Nov  2 2010
+# -- Compiling module divider7
+# 
+# Top level modules:
+# 	divider7
+# vlog -vlog01compat -work work +incdir+G:/information_theory_test/my_project/module {G:/information_theory_test/my_project/module/chuan_to_bing.v}
+# Model Technology ModelSim ALTERA vlog 6.6d Compiler 2010.11 Nov  2 2010
+# -- Compiling module chuanbing
+# 
+# Top level modules:
+# 	chuanbing
+# vlog -vlog01compat -work work +incdir+G:/information_theory_test/my_project/module {G:/information_theory_test/my_project/module/chuan_to_bing7.v}
+# Model Technology ModelSim ALTERA vlog 6.6d Compiler 2010.11 Nov  2 2010
+# -- Compiling module chuan_to_bing7
+# 
+# Top level modules:
+# 	chuan_to_bing7
+# vlog -vlog01compat -work work +incdir+G:/information_theory_test/my_project/module {G:/information_theory_test/my_project/module/counter.v}
+# Model Technology ModelSim ALTERA vlog 6.6d Compiler 2010.11 Nov  2 2010
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# vcom -93 -work work {G:/information_theory_test/my_project/module/hanming_bianma.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity hmbbm
+# -- Compiling architecture myarch of hmbbm
+# vcom -93 -work work {G:/information_theory_test/my_project/module/jiaozheng.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity ss
+# -- Compiling architecture myarch of ss
+# 
+# vlog -vlog01compat -work work +incdir+G:/information_theory_test/my_project/simulation/modelsim {G:/information_theory_test/my_project/simulation/modelsim/hanming_decode_mif.vt}
+# Model Technology ModelSim ALTERA vlog 6.6d Compiler 2010.11 Nov  2 2010
+# -- Compiling module hanming_decode_mif_vlg_tst
+# 
+# Top level modules:
+# 	hanming_decode_mif_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L cyclone_ver -L rtl_work -L work -voptargs="+acc" hanming_decode_mif_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L cyclone_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps hanming_decode_mif_vlg_tst 
+# Loading work.hanming_decode_mif_vlg_tst
+# ** Error: (vsim-3033) G:/information_theory_test/my_project/simulation/modelsim/hanming_decode_mif.vt(33): Instantiation of 'hanming_decode_mif' failed. The design unit was not found.
+#         Region: /hanming_decode_mif_vlg_tst
+#         Searched libraries:
+#             G:\quartus11.0\soft\modelsim_ase\altera\verilog\altera
+#             G:\quartus11.0\soft\modelsim_ase\altera\verilog\220model
+#             G:\quartus11.0\soft\modelsim_ase\altera\verilog\sgate
+#             G:\quartus11.0\soft\modelsim_ase\altera\verilog\altera_mf
+#             G:\quartus11.0\soft\modelsim_ase\altera\verilog\cyclone
+#             G:\information_theory_test\my_project\simulation\modelsim\rtl_work
+#             G:\information_theory_test\my_project\simulation\modelsim\rtl_work
+#             G:\information_theory_test\my_project\simulation\modelsim\rtl_work
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./hanming_code_run_msim_rtl_verilog.do PAUSED at line 18
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line

@@ -1,0 +1,23 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+G:/information_theory_test/my_project/module {G:/information_theory_test/my_project/module/divide4.v}
+vlog -vlog01compat -work work +incdir+G:/information_theory_test/my_project/module {G:/information_theory_test/my_project/module/divide7.v}
+vlog -vlog01compat -work work +incdir+G:/information_theory_test/my_project/module {G:/information_theory_test/my_project/module/chuan_to_bing.v}
+vlog -vlog01compat -work work +incdir+G:/information_theory_test/my_project/module {G:/information_theory_test/my_project/module/chuan_to_bing7.v}
+vlog -vlog01compat -work work +incdir+G:/information_theory_test/my_project/module {G:/information_theory_test/my_project/module/counter.v}
+vcom -93 -work work {G:/information_theory_test/my_project/module/hanming_bianma.vhd}
+vcom -93 -work work {G:/information_theory_test/my_project/module/jiaozheng.vhd}
+
+vlog -vlog01compat -work work +incdir+G:/information_theory_test/my_project/simulation/modelsim {G:/information_theory_test/my_project/simulation/modelsim/hanming_decode_mif.vt}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L cyclone_ver -L rtl_work -L work -voptargs="+acc" code
+
+add wave *
+view structure
+view signals
+run -all

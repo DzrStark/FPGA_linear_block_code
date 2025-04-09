@@ -1,0 +1,41 @@
+// Generated on "03/29/2025 23:49:14"
+                                                                                
+// Verilog Test Bench template for design : hanming_decode_mif
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module hanming_decode_mif_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clk_20MHz;  // 修改信号名
+// wires                                               
+wire [6:0] cb_out;
+wire code_out;
+wire decode_out;
+wire hm_noise;
+wire m_sequence;
+wire [6:3] ym_out;
+
+// assign statements (if any)                          
+hanming_decode_mif i1 (
+// port map - connection between master ports and signals/registers   
+    .clk_20MHz (clk_20MHz),  // 修改端口名
+    .cb_out(cb_out),
+    .code_out(code_out),
+    .decode_out(decode_out),
+    .hm_noise(hm_noise),
+    .m_sequence(m_sequence),
+    .ym_out(ym_out)
+);
+
+  always #60 clk_20MHz = ~clk_20MHz;		//	时间单位为1ns，则经过25ns翻转一次电平，所以一个周期为50ns，即20MHZ
+  initial  clk_20MHz =1'b0;
+	
+	  //initial  #8000  $stop;
+
+      
+endmodule
