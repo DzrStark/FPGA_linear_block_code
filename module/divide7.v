@@ -1,0 +1,44 @@
+module divider7 (
+    input clk,
+    output clk_out
+);
+
+    localparam N = 7;
+    reg [7:0] cnt_1, cnt_2;
+    reg clk_pos, clk_neg;
+
+    always @(posedge clk) begin
+        if (clk_pos) begin
+            if (cnt_1 == (N+1)/2) begin
+                clk_pos <= ~clk_pos;
+                cnt_1 <= 1;
+            end else begin
+                cnt_1 <= cnt_1 + 1;
+            end
+        end else if (cnt_1 == (N-1)/2) begin
+            clk_pos <= ~clk_pos;
+            cnt_1 <= 1;
+        end else begin
+            cnt_1 <= cnt_1 + 1;
+        end
+    end
+
+    always @(negedge clk) begin
+        if (clk_neg) begin
+            if (cnt_2 == (N+1)/2) begin
+                clk_neg <= ~clk_neg;
+                cnt_2 <= 1;
+            end else begin
+                cnt_2 <= cnt_2 + 1;
+            end
+        end else if (cnt_2 == (N-1)/2) begin
+            clk_neg <= ~clk_neg;
+            cnt_2 <= 1;
+        end else begin
+            cnt_2 <= cnt_2 + 1;
+        end
+    end
+
+    assign clk_out = clk_pos & clk_neg;
+
+endmodule
